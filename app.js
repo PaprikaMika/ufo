@@ -40,7 +40,7 @@ app.get('/wikipedia', function(req, res) {
 
 });
 
-app.get('/UFO1', function(req, res) {
+app.get('/UFO', function(req, res) {
 
   var url = 'https://www.ufocasebook.com/bestufopictures.html';
 
@@ -65,7 +65,7 @@ app.get('/UFO1', function(req, res) {
       //All the web scraping magic will happen here
       res.send(data);
 
-      fs.writeFile('ufo-output1.js', 'var ufo_list1 = [' + data + ']', function(error) {
+      fs.writeFile('ufo-output.js', 'var ufo_list = [' + data + ']', function(error) {
         console.log('file written on hard drive!');
 
       })
