@@ -40,7 +40,7 @@ app.get('/wikipedia', function(req, res) {
 
 });
 
-app.get('/ufo', function(req, res) {
+app.get('/UFO1', function(req, res) {
 
   var url = 'https://www.ufocasebook.com/bestufopictures.html';
 
@@ -65,7 +65,7 @@ app.get('/ufo', function(req, res) {
       //All the web scraping magic will happen here
       res.send(data);
 
-      fs.writeFile('ufo-output.js', 'var ufo_list = [' + data + ']', function(error) {
+      fs.writeFile('ufo-output1.js', 'var ufo_list1 = [' + data + ']', function(error) {
         console.log('file written on hard drive!');
 
       })
@@ -74,13 +74,8 @@ app.get('/ufo', function(req, res) {
 
 });
 
-app.listen(port);
-console.log('Magic happens on port ' + port);
 
-exports = module.exports = app;
-
-
-app.get('/ufo', function(req, res) {
+app.get('/UFO2', function(req, res) {
 
   var url = 'https://www.ufocasebook.com/bestufopictures2.html';
 
@@ -105,7 +100,7 @@ app.get('/ufo', function(req, res) {
       //All the web scraping magic will happen here
       res.send(data);
 
-      fs.writeFile('ufo-output.js', 'var ufo_list = [' + data + ']', function(error) {
+      fs.writeFile('ufo-output2.js', 'var ufo_list2 = [' + data + ']', function(error) {
         console.log('file written on hard drive!');
 
       })
@@ -114,12 +109,7 @@ app.get('/ufo', function(req, res) {
 
 });
 
-app.listen(port);
-console.log('Magic happens on port ' + port);
-
-exports = module.exports = app;
-
-app.get('/ufo', function(req, res) {
+app.get('/UFO3', function(req, res) {
 
   var url = 'https://www.ufocasebook.com/bestufopictures3.html';
 
@@ -144,7 +134,7 @@ app.get('/ufo', function(req, res) {
       //All the web scraping magic will happen here
       res.send(data);
 
-      fs.writeFile('ufo-output.js', 'var ufo_list = [' + data + ']', function(error) {
+      fs.writeFile('ufo-output3.js', 'var ufo_list3 = [' + data + ']', function(error) {
         console.log('file written on hard drive!');
 
       })
