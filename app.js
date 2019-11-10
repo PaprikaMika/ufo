@@ -65,7 +65,7 @@ app.get('/UFO', function(req, res) {
       //All the web scraping magic will happen here
       res.send(data);
 
-      fs.writeFile('ufo-output.js', 'var ufo_list = [' + data + ']', function(error) {
+      fs.writeFile('ufo-output.js', function(error) {
         console.log('file written on hard drive!');
 
       })
