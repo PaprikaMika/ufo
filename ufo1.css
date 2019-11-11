@@ -1,0 +1,36 @@
+html,
+
+#titles
+{
+	position: absolute;
+	width: 18em;
+	height: 50em;
+	bottom: 0;
+	left: 50%;
+	margin-left: -9em;
+	font-size: 200%;
+	font-weight: bold;
+	text-align: justify;
+  transform-origin: 50% 100%;
+	transform: perspective(400px) rotateX(15deg);
+  margin-top: 1
+}
+.img {
+  z-index: 1;
+  position: absolute;
+  align-content: left;
+
+}
+
+#titlecontent
+{
+	position: relative;
+	top: 100%;
+	animation: scroll 100s linear 4s infinite;
+  scroll-behavior: auto;
+}
+
+@keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}

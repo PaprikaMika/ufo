@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title></title>
+  <title></title>
   <meta charset="utf-8">
- <script type="text/javascript" src="ufo-output.js"></script>
- <script type="text/javascript" >
- function loadUFO() {
-   var div = document.getElementById("data");
-   for(var i = 0; i < ufo_list.length; i++) {
-     if(!(ufo_list[i] === "undefined")) {
-       img = "<img class='tile' src='" + ufo_list[i] + "'>";
-       div.innerHTML = div.innerHTML + img;
-     }
-   }
- }
- </script>
- <style type="css">
- img:nth-of-type(5) {
-   height: 300px;
-   width: 5px;
-   margin: 5px;
- }
- </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+  <script type="text/javascript" src="ufo-output.js"></script>
+  <script type="text/javascript" src="ufo-output2.js"></script>
+  <script type="text/javascript" >
+  function loadUFO() {
+
+    function unique(list) {
+      var result = [];
+      $.each(list, function(i, e) {
+        if ($.inArray(e, result) == -1) result.push(e);
+      });
+      return result;
+    }
+
+    var unique_list = unique(ufo_list);
+
+    var div = document.getElementById("data");
+    for(var i = 0; i < unique_list.length; i++) {
+      if(!(ufo_list[i] === "undefined")) {
+        img = "<img class='tile' src='" + unique_list[i] + "'>";
+        div.innerHTML += (img);
+      }
+    }
+
+    for(var i = 0; i < ufo_list2.length; i++) {
+      if(!(ufo_list2[i] === "undefined")) {
+        img = "<img class='tile' src='" + ufo_list2[i] + "'>";
+        div.innerHTML += (img);
+      }
+    }
+  }
+
+  </script>
+  <style type="css">
+  img:nth-of-type(5) {
+    height: 300px;
+    width: 5px;
+    margin: 5px;
+  }
+  </style>
 </head>
-<body onload="loadufo()">
- <div id="data"></div>
+<body onload="loadUFO()">
+  <div id="data"></div>
 </body>
 </html>
