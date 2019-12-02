@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+  <script type="text/javascript" src="ufo-output.js"></script>
+  <script type="text/javascript" src="ufo-output2.js"></script>
+  <script type="text/javascript" src="ufo-output3.js"></script>
+  <script type="text/javascript">
+  function loadUFO() {
+
+    function unique(list) {
+      var result = [];
+      $.each(list, function(i, e) {
+        if ($.inArray(e, result) == -1) result.push(e);
+      });
+      return result;
+    }
+
+    var unique_list = unique(ufo_list);
+    var unique_list2 = unique(ufo_list2);
+    var unique_list3 = unique(ufo_list3);
+
+    var div = document.getElementById("data");
+    for(var i = 0; i < unique_list.length; i++) {
+      if(!(ufo_list[i] === "undefined")) {
+        img = "<img class='tile' src='" + unique_list[i] + "'>";
+        div.innerHTML += (img);
+      }
+    }
+    var div = document.getElementById("data");
+    for(var i = 0; i < unique_list2.length; i++) {
+      if(!(ufo_list2[i] === "undefined")) {
+        img = "<img class='tile' src='" + unique_list2[i] + "'>";
+        div.innerHTML += (img);
+      }
+    }
+    var div = document.getElementById("data");
+    for(var i = 0; i < unique_list3.length; i++) {
+      if(!(ufo_list3[i] === "undefined")) {
+        img = "<img class='tile' src='" + unique_list3[i] + "'>";
+        div.innerHTML += (img);
+      }
+    }
+  }
+
+  </script>
+  <style type="css">
+  .unique_list3{
+    max-height: 175px;
+    max-width: 120px;
+    position: absolute;
+    object-fit: contain;
+  }
+  </style>
+</head>
+<body onload="loadUFO()">
+  <div id="data"></div>
+</body>
+</html>

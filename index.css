@@ -1,0 +1,180 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  background-color: green;
+}
+
+/* SCROLLING PANE START */
+/* hide the scrollbars */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.scrolling-pane {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  width: 33.4%;
+  margin-left: -4px;
+  overflow: scroll;
+  z-index: 0;
+}
+
+.scrolling-pane2 {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  width: 20%;
+  margin-left: -4px;
+  overflow: scroll;
+  z-index: 0;
+}
+
+.scrolling-pane3d {
+position: absolute;
+left: 0px;
+top: 1px;
+z-index: 2;
+height: 100%;
+width: 33.3%;
+background-color:white;
+display: inline-block;
+overflow: scroll;
+font-size: 40px;
+font-family: sans-serif;
+transform-origin: 50% 100%;
+transform: perspective(200px) rotateX(25deg);
+z-index: 1;
+}
+
+.scrolling-pane-bar {
+left: 0px;
+top:55%;
+position: absolute;
+vertical-align: top;
+background-color:white;
+height: 100px;
+width: 53.4%;
+margin-left: -4px;
+overflow: scroll;
+z-index: 2;
+}
+
+/* SCROLLING PANE END */
+/* these are just the colors */
+.blue-color {
+  background-color: blue;
+}
+
+.green-color {
+  background-color: green;
+}
+
+.orange-color {
+  background-color: orange;
+}
+
+.white-color {
+  background-color: white;
+}
+
+/* this is dummy content */
+.content {
+  width: 90%;
+  margin: 10px auto;
+  font-size: 40px;
+  font-family: sans-serif;
+}
+
+.content2 {
+  width: 90%;
+  margin: 10px auto;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.content3 {
+  width: 90%;
+  margin: 10px auto;
+  font-size: 40px;
+  font-family: sans-serif;
+  white-space: nowrap;
+}
+
+.images {
+  position: absolute;
+  height: auto;
+  width: auto;
+  max-width: 100px;
+  max-height: 75px;
+  object-fit: contain;
+  z-index: 2;
+  border-radius: 50%;
+  filter: blur(20px);
+  transition: .5s ease;
+}
+
+.images1{
+  position: fixed;
+  height: auto;
+  width: auto;
+  max-width: 100px;
+  max-height: 75px;
+  object-fit: contain;
+  z-index: 2;
+  border-radius: 50%;
+  filter: blur(20px);
+  transition: .5s ease;
+  overflow: hidden;
+}
+
+.images2{
+  margin-left: 100px;
+  margin-top: 200px;
+  position: fixed;
+  height: auto;
+  width: auto;
+  max-width: 100px;
+  max-height: 75px;
+  object-fit: contain;
+  z-index: 2;
+  border-radius: 50%;
+  filter: blur(20px);
+  transition: .5s ease;
+  overflow: hidden;
+}
+
+.images3{
+  margin-left: 30px;
+  margin-top: 30px;
+  position: fixed;
+  height: auto;
+  width: auto;
+  max-width: 100px;
+  max-height: 75px;
+  object-fit: contain;
+  z-index: 2;
+  border-radius: 50%;
+  filter: blur(20px);
+  transition: .5s ease;
+  overflow: hidden;
+}
+
+
+.images:hover{
+   transition: .5s ease;
+  filter: blur(0px);
+}
+
+.unique_list3{
+  max-height: 175px;
+  max-width: 120px;
+  position: absolute;
+  object-fit: contain;
+}
