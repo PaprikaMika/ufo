@@ -174,8 +174,9 @@ app.get('/UFO4', function(req, res) {
       })
     }
   });
-
 });
+
+
 app.get('/UFO5', function(req, res) {
 
   var url = 'https://www.ufocasebook.com/bestufopictures5.html';
@@ -209,6 +210,181 @@ app.get('/UFO5', function(req, res) {
   });
 
 });
+
+app.get('/UFO6', function(req, res) {
+
+  var url = 'https://www.ufocasebook.com/bestufopictures6.html';
+
+  request(url, function(error, response, html) {
+    if (!error) {
+      var $ = cheerio.load(html);
+
+      var data = []
+
+      $('tbody').filter(function() {
+        $('tr').filter(function() {
+          $('td').filter(function() {
+            $('center').filter(function() {
+              $(this).find('center').each(function(i, elem) {
+                data[i] = "'" + $(this).find('a').find('img').attr('src') + "'";
+              })
+            })
+          })
+        })
+      });
+
+      //All the web scraping magic will happen here
+      res.send(data);
+
+      fs.writeFile('ufo-output6.js', 'var ufo_list6 = [' + data + ']', function(error) {
+        console.log('file written on hard drive!');
+
+      })
+    }
+  });
+
+});
+
+app.get('/UFO7', function(req, res) {
+
+  var url = 'https://www.ufocasebook.com/bestufopictures7.html';
+
+  request(url, function(error, response, html) {
+    if (!error) {
+      var $ = cheerio.load(html);
+
+      var data = []
+
+      $('tbody').filter(function() {
+        $('tr').filter(function() {
+          $('td').filter(function() {
+            $('center').filter(function() {
+              $(this).find('center').each(function(i, elem) {
+                data[i] = "'" + $(this).find('a').find('img').attr('src') + "'";
+              })
+            })
+          })
+        })
+      });
+
+      //All the web scraping magic will happen here
+      res.send(data);
+
+      fs.writeFile('ufo-output7.js', 'var ufo_list7 = [' + data + ']', function(error) {
+        console.log('file written on hard drive!');
+
+      })
+    }
+  });
+
+});
+
+app.get('/UFO8', function(req, res) {
+
+  var url = 'https://www.ufocasebook.com/bestufopictures8.html';
+
+  request(url, function(error, response, html) {
+    if (!error) {
+      var $ = cheerio.load(html);
+
+      var data = []
+
+      $('tbody').filter(function() {
+        $('tr').filter(function() {
+          $('td').filter(function() {
+            $('center').filter(function() {
+              $(this).find('center').each(function(i, elem) {
+                data[i] = "'" + $(this).find('a').find('img').attr('src') + "'";
+              })
+            })
+          })
+        })
+      });
+
+      //All the web scraping magic will happen here
+      res.send(data);
+
+      fs.writeFile('ufo-output8.js', 'var ufo_list8 = [' + data + ']', function(error) {
+        console.log('file written on hard drive!');
+
+      })
+    }
+  });
+
+});
+
+app.get('/UFO9', function(req, res) {
+
+  var url = 'https://www.ufocasebook.com/bestufopictures8.html';
+
+  request(url, function(error, response, html) {
+    if (!error) {
+      var $ = cheerio.load(html);
+
+      var data = []
+
+      $('tbody').filter(function() {
+        $('tr').filter(function() {
+          $('td').filter(function() {
+            $('center').filter(function() {
+              $(this).find('center').each(function(i, elem) {
+                data[i] = "'" + $(this).find('a').find('img').attr('src') + "'";
+              })
+            })
+          })
+        })
+      });
+
+      //All the web scraping magic will happen here
+      res.send(data);
+
+      fs.writeFile('ufo-output9.js', 'var ufo_list9 = [' + data + ']', function(error) {
+        console.log('file written on hard drive!');
+
+      })
+    }
+  });
+
+});
+
+
+app.get('/UFO10', function(req, res) {
+
+  var url = 'https://www.ufocasebook.com/bestufopictures8.html';
+
+  request(url, function(error, response, html) {
+    if (!error) {
+      var $ = cheerio.load(html);
+
+      var data = []
+
+      $('tbody').filter(function() {
+        $('tr').filter(function() {
+          $('td').filter(function() {
+            $('center').filter(function() {
+              $(this).find('center').each(function(i, elem) {
+                data[i] = "'" + $(this).find('a').find('img').attr('src') + "'";
+              })
+            })
+          })
+        })
+      });
+
+      //All the web scraping magic will happen here
+      res.send(data);
+
+      fs.writeFile('ufo-output10.js', 'var ufo_list10 = [' + data + ']', function(error) {
+        console.log('file written on hard drive!');
+
+      })
+    }
+  });
+
+});
+
+
+
+
 app.listen(port);
 console.log('Magic happens on port ' + port);
 
