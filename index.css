@@ -7,7 +7,7 @@
 
 body, html {
   height: 100%;
-  background-color: green;
+  background-color: black;
 }
 
 /* SCROLLING PANE START */
@@ -17,26 +17,69 @@ body, html {
 }
 
 .scrolling-pane {
+  background-color: white;
   display: inline-block;
   vertical-align: top;
   height: 100%;
   width: 33.4%;
   margin-left: -4px;
   overflow: scroll;
-  z-index: 0;
+  outline: 2px solid black;
 }
 
+.scrolling-pane img{
+mix-blend-mode: darken;
+filter: invert(100%);
+margin-top: -4px;
+}
+
+
+
+.title{
+  transform: rotate(90deg);
+  overflow: scroll;
+}
+
+.scrolling-pane-right {
+  background-color: black;
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  width: 36.7%;
+  margin-left: -4px;
+  overflow: scroll;
+  outline: 2px solid black;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -4px;
+  overflow: scroll;
+  z-index: 1;
+  object-fit: contain;
+
+  font-size: 95px;
+  text-align: center;
+  color: black;
+  font-family: "Arial Narrow";
+    -webkit-text-stroke: 1px white;
+}
+
+
+
+
 .scrolling-pane2 {
+    background-color:white;
   display: inline-block;
   vertical-align: top;
   height: 100%;
   width: 20%;
-  margin-left: -4px;
+  margin-left: -3px;
   overflow: scroll;
-  z-index: 0;
+  z-index: 1;
+  outline: 2px solid black;
 }
 
-.scrolling-pane4 {
+.scrolling-pane4{
   display: inline-block;
   vertical-align: top;
   height: 100%;
@@ -45,53 +88,64 @@ body, html {
   overflow: scroll;
   z-index: 1;
   background-color:white;
+  outline: 2px solid black;
   object-fit: contain;
 }
 
+.scrolling-pane4-images {
+
+
+}
+
+
+.tile{
+  margin-top: -20px;
+  width:100%
+}
 .scrolling-pane3d {
 position: absolute;
 left: 0px;
 top: 1px;
 z-index: 2;
 height: 100%;
-width: 33.3%;
+width: 33%;
 background-color:white;
+outline: 2px solid black;
 display: inline-block;
 overflow: scroll;
 font-size: 40px;
-font-family: sans-serif;
+font-family: "Arial Narrow";
 transform-origin: 50% 100%;
-transform: perspective(200px) rotateX(25deg);
+transform: perspective(23rem) rotateX(30deg);
 z-index: 1;
+
 }
 
 .scrolling-pane-bar {
-left: 0px;
-top:55%;
+
 position: absolute;
 vertical-align: top;
 background-color:white;
-height: 100px;
-width: 53.4%;
-margin-left: -4px;
-overflow: scroll;
-z-index: 2;
+outline: 2px solid black;
+font-size: 40px;
+font-family: "Arial Narrow";
+height: 90px;
+width: 400px;
+z-index: 3;
+top: 350px;
+left: 1150px;
+overflow-y: auto;
+overflow-x: hidden;
+transform: rotate(-90deg) translateY(-100px);
+transform-origin: right top;
+
 }
 
 
-/* SCROLLING PANE END */
-/* these are just the colors */
-.blue-color {
-  background-color: blue;
-}
 
-.green-color {
-  background-color: green;
-}
 
-.orange-color {
-  background-color: orange;
-}
+
+
 
 .white-color {
   background-color: white;
@@ -101,74 +155,29 @@ z-index: 2;
 .content {
   position: inherit;
   width: 90%;
-  margin: 10px auto;
-  font-size: 40px;
-  font-family: sans-serif;
-  z-index: 0;
+  height: auto;
+  margin: 20px;
+  font-size: 30px;
+  font-family: "Arial Narrow";
+  z-index: 2;
 }
 
 .content2 {
   width: 90%;
   margin: 10px auto;
   font-size: 20px;
-  font-family: sans-serif;
+  font-family: "Arial Narrow";
 }
 
 .content3 {
   width: 90%;
-  margin: 10px auto;
-  font-size: 40px;
-  font-family: sans-serif;
+  margin-left: 20px;
+  font-size: 22px;
+  font-family: "Arial Narrow";
   white-space: nowrap;
+
+
 }
-
-body,
-div,
-ul,
-li,
-p {
-  margin: 0;
-  padding: 0;
-  font-family: verdana;
-  font-size: 16pt;
-}
-
-
-/*from HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERER*/
-.tickerwrapper {
-  /* the outer div */
-
-  position: relative;
-  top: 30px;
-  left:0%;
-  border: 1px solid #444;
-  background: #fff;
-  width: 99.9%;
-  height: 30px;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-ul.list {
-  position: relative;
-  display: inline-block;
-  list-style: none;
-  padding:0;
-  margin:0;
-}
-
-ul.list.cloned {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-ul.list li {
-  float: left;
-  padding-left: 20px;
-}
-
-/* TO HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERE*/
 
 .images {
   position: fixed;
@@ -194,5 +203,76 @@ ul.list li {
 
 .smudges{
   position: fixed;
-  z-index: 0;
+  z-index: 5;
+}
+
+.smallblock{
+  height: 35px; width: 20px; background-color:black; display:inline-block;
+  margin-right:6px;margin-left:0px;margin-bottom:-5px;margin-top:10px;
+}
+
+::-webkit-scrollbar{width:2px;height:2px;}
+::-webkit-scrollbar-button{width:2px;height:2px;}
+
+
+
+.horizontal-scroll-wrapper{
+  position: absolute;
+  display: inline-block;
+  top:0;
+  left:-10px;
+  width:90px;
+  max-height:1000px;
+  margin-top: 375px;
+  background:white;
+  overflow-y:auto;
+  overflow-x:hidden;
+  transform:rotate(-90deg) translateY(-80px);
+  transform-origin:right top;
+  outline: 2px solid black;
+  height: 970px;
+  z-index: 3;
+}
+.horizontal-scroll-wrapper > div{
+  display:block;
+  padding:0px;
+  background:white;
+  transform:rotate(90deg);
+  transform-origin: right top;
+  white-space: nowrap;
+}
+
+
+
+.rectangles{
+  top:100px;
+
+}
+.rectangles > div{
+  width:140px;
+  height:60px;
+  margin:150px 15px;
+  padding:5px;
+  background:white;
+  transform:rotate(90deg) translateY(80px);
+  transform-origin: right top;
+  font-size: 40px;
+  font-family: "Arial Narrow";
+}
+
+.block{
+  margin-top: -20px;
+  font-size: 75px;
+  font-family: "Arial Narrow";
+  color: white;
+  text-align: center;
+  position: sticky;
+}
+
+.smalltext{
+  margin: 20px;
+  font-size: 20px;
+  font-family: "Arial Narrow";
+  color: white;
+  text-align: center;
 }
